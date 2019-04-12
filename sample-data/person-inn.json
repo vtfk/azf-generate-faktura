@@ -1,0 +1,30 @@
+[
+  {
+    "Enhet": "BAMVS",
+    "Personnr": "01020304050",
+    "Klasse": "BV2UA",
+    "PC-kode": "PC17",
+    "Født": "11/2/2001"
+  },
+  {
+    "Enhet": "BAMVS",
+    "Personnr": "06070809100",
+    "Klasse": "BV3AI",
+    "PC-kode": "PC17x",
+    "Født": "12/1/1985"
+  },
+  {
+    "Enhet": "BAMVS",
+    "Personnr": "098265353100",
+    "Klasse": "BV1AI",
+    "PC-kode": "PC18",
+    "Født": "4/4/2000"
+  },
+  {
+    "Enhet": "BAMVS",
+    "Personnr": "098265353100",
+    "Klasse": "BV1AI",
+    "PC-kode": "PC-UTLÅN",
+    "Født": "2/12/2000"
+  }
+]
