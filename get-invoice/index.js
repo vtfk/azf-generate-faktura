@@ -4,9 +4,9 @@ const getInvoice = require('../lib/get-invoice')
 module.exports = async function (context, req) {
     logger('INFO', 'Received request')
     try {
-        if (!req.body && req.body['PC-kode']) throw Error('Include body in request')
+        if (!req.body && req.body['PcCode']) throw Error('Include body in request')
 
-        const invoice = getInvoice(req.body['PC-kode'])
+        const invoice = getInvoice(req.body['PcCode'])
         // TODO: Return something else if that pc-code does not exist?
         context.res = {
             status: 200,
@@ -16,7 +16,7 @@ module.exports = async function (context, req) {
     } catch (error) {
         context.res = {
             status: 400,
-            body: 'Body did not include the key "PC-kode"' + error
+            body: 'Body did not include the key "PcCode"' + error
         }
     }
 };
