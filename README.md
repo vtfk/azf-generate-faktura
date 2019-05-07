@@ -1,5 +1,5 @@
 # AZF-faktura-grunnlag
 
-# Lisens
+# License
 
 [MIT](LICENSE)
