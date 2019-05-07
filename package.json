@@ -1,0 +1,19 @@
+{
+  "name": "azfa-vgo-faktura-grunnlag",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "graphql-request": "^1.8.2",
+    "jsonwebtoken": "^8.5.1",
+    "tfk-schools-info": "^2.1.5"
+  }
+}
