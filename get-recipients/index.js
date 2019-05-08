@@ -19,10 +19,28 @@ module.exports = async function(context, req) {
         body: "Something went wrong while processing the request."
       }
     }
+  } else if (req.body && req.body.personNr && req.body.school) {
+    try {
+      let { persons } = await getGraphQL([req.body.personNr])
+      let person = persons[0]
+      person.school = req.body.school
+      persons = formatRecipients(person)
+      context.res = {
+        status: 200,
+        body: persons
+      }
+    } catch (error) {
+      context.log.error(error)
+
+      context.res = {
+        status: 500,
+        body: "Something went wrong while processing the request."
+      }
+    }
   } else {
     context.res = {
       status: 400,
-      body: "Please pass an array with at least 'personNr' and 'school' keys in the body."
+      body: "Please pass at least 'personNr' and 'school' keys in the body."
     }
   }
 }
