@@ -17,7 +17,7 @@ module.exports = async function (context, req) {
     } catch (error) {
         context.res = {
             status: 400,
-            body: "Please pass an array of objects with at least a key 'Personnr'"
+            body: "Please pass an array of objects with at least a key 'personNr'"
         }
     }
 };
