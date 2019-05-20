@@ -16,6 +16,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.2.4",
     "mongoist": "^2.0.0",
-    "tfk-schools-info": "^2.1.5"
+    "tfk-schools-info": "^2.1.5",
+    "winston": "^2.4.4",
+    "winston-papertrail": "^1.0.5"
   }
 }
