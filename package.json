@@ -17,7 +17,7 @@
     "mongodb": "^3.2.4",
     "mongoist": "^2.0.0",
     "tfk-schools-info": "^2.1.5",
-    "winston": "^2.4.4",
+    "winston": "^3.0.0",
     "winston-papertrail": "^1.0.5"
   }
 }
