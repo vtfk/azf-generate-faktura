@@ -1,10 +1,12 @@
-const {logger, config} = require('../lib/logger')
+const config = require('../config')
+const {logger, config: logConfig} = require('../lib/logger')
 const getInvoice = require('../lib/get-invoice')
 
+
 module.exports = async function (context, req) {
-    console.log(process.env.NODE_ENV)
+    console.log(config.NODE_ENV)
     try {
-        config(req.body.eventSourceId)
+        logConfig(req.body.eventSourceId)
     } catch {
         context.res = {
             status: 400,

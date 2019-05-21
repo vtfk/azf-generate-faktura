@@ -1,10 +1,15 @@
 const { logger, config } = require('../lib/logger')
 const filterDuplcates = require('../lib/filter-duplicates')
+const nanoid = require('nanoid')
 
 
 module.exports = async function (context, req) {
+    if (!req.body) {
+        throw Error('Body was not included in request')
+    }
+    const eventSourceId = req.body.eventSourceId || nanoid()
     try {
-        config(req.body.eventSourceId)
+        config(eventSourceId)
     } catch {
         context.res = {
             status: 400,
@@ -22,9 +27,14 @@ module.exports = async function (context, req) {
         const uniquePersons = filterDuplcates(persons)
         logger('info', ['filter-duplicates', 'unique persons', uniquePersons.length , 'Done filtering'])
 
+        const responseData = {
+            eventSourceId,
+            uniquePersons
+        }
+
         context.res = {
             status: 200,
-            body: uniquePersons
+            body: responseData
         }
         
     } catch (error) {
